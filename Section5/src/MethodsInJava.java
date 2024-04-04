@@ -8,7 +8,9 @@ public class MethodsInJava {
 
 
         calculateScore();
+
         calculateScoreTwo(true, 20000, 9, 300);
+        //new
         calculateScoreTwo(newGameOver,newScore,newLevelCompleted,newBonus);
 
     }
