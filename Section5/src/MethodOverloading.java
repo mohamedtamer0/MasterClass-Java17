@@ -1,5 +1,6 @@
 public class MethodOverloading {
     public static void main(String[] args) {
+
         int newScore = calcScore("Tamer", 500);
         System.out.println("New Score Is " + newScore);
 
