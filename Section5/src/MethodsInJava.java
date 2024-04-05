@@ -21,6 +21,8 @@ public class MethodsInJava {
         int highScore = calculateScoreThree(newGameOver, newScore, newLevelCompleted, newBonus);
         System.out.println("The High Score : " + highScore);
 
+        System.out.println("The High Score : " + calculateScoreThree(newGameOver, newScore, newLevelCompleted, newBonus));
+
     }
 
     public static void calculateScore() {
