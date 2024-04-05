@@ -18,7 +18,8 @@ public class MethodsInJava {
         newLevelCompleted = 6;
         newBonus = 700;
         //int
-        calculateScoreThree(newGameOver, newScore, newLevelCompleted, newBonus);
+        int highScore = calculateScoreThree(newGameOver, newScore, newLevelCompleted, newBonus);
+        System.out.println("The High Score : " + highScore);
 
     }
 
