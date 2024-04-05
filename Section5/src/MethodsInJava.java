@@ -11,10 +11,14 @@ public class MethodsInJava {
 
         calculateScoreTwo(true, 20000, 9, 300);
         //void
-        calculateScoreTwo(newGameOver,newScore,newLevelCompleted,newBonus);
+        calculateScoreTwo(newGameOver, newScore, newLevelCompleted, newBonus);
 
+
+        newScore = 5000;
+        newLevelCompleted = 6;
+        newBonus = 700;
         //int
-        calculateScoreTwo(newGameOver,newScore,newLevelCompleted,newBonus);
+        calculateScoreThree(newGameOver, newScore, newLevelCompleted, newBonus);
 
     }
 
