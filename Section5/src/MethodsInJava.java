@@ -10,7 +10,10 @@ public class MethodsInJava {
         calculateScore();
 
         calculateScoreTwo(true, 20000, 9, 300);
-        //new
+        //void
+        calculateScoreTwo(newGameOver,newScore,newLevelCompleted,newBonus);
+
+        //int
         calculateScoreTwo(newGameOver,newScore,newLevelCompleted,newBonus);
 
     }
@@ -36,5 +39,15 @@ public class MethodsInJava {
             System.out.println(newFinalScore);
 
         }
+    }
+
+    public static int calculateScoreThree(boolean newGameOver, int newScore, int newLevelCompleted, int newBonus) {
+        int newFinalScore = newScore;
+        if (newGameOver == true) {
+            newFinalScore += (newLevelCompleted * newBonus);
+            System.out.println(newFinalScore);
+
+        }
+        return newFinalScore;
     }
 }
