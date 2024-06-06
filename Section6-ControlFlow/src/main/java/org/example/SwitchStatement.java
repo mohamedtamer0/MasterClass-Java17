@@ -2,7 +2,7 @@ package org.example;
 
 public class SwitchStatement {
     public static void main(String[] args) {
-        int switchValue = 3;
+        int switchValue = 2;
         switch (switchValue) {
             case 1:
                 System.out.println("Value was 1");
