@@ -12,9 +12,9 @@ public class SwitchStatement {
             case 4:
                 System.out.println("Was a 2,3,4");
                 System.out.println("Actually it was a " + switchValue);
-                break;
+                //break;
             default:
-                System.out.println("was not 1 or 2");
+                System.out.println("was not 1,2,3,4, Or 5");
                 break;
         }
     }
