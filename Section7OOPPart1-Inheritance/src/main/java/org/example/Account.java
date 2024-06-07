@@ -7,6 +7,18 @@ public class Account {
     private String customerEmail;
     private String customerPhone;
 
+    public Account() {
+        System.out.println("Hello From Constructors!");
+    }
+
+    public Account(String number, double balance, String customerName, String customerEmail, String customerPhone) {
+        System.out.println("Hello From Constructors With Parameters");
+        this.number = number;
+        this.balance = balance;
+        this.customerName = customerName;
+        this.customerEmail = customerEmail;
+        this.customerPhone = customerPhone;
+    }
 
     public void depositFunds(double depositAmount) {
         balance += depositAmount;
@@ -67,7 +79,8 @@ public class Account {
 
 
     public static void main(String[] args) {
-        Account account = new Account();
+        Account account = new Account("12345", 1000.00, "Tamer", "mohamedtamerdev@gmail.com",
+                "02121212");
         account.withdrawFunds(100.0);
         account.depositFunds(250);
         account.withdrawFunds(50);
