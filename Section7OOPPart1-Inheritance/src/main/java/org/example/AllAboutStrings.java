@@ -9,6 +9,10 @@ public class AllAboutStrings {
         String helloWorld = "Hello World";
         System.out.printf("index of r = %d %n", helloWorld.indexOf('r'));
         System.out.printf("index of World = %d %n", helloWorld.lastIndexOf("World"));
+
+
+        System.out.printf("index of r = %d %n", helloWorld.indexOf('r', 3));
+        System.out.printf("index of World = %d %n", helloWorld.lastIndexOf("World", 8));
     }
 
     public static void printInfo(String string) {
