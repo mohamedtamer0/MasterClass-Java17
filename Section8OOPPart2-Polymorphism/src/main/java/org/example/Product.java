@@ -1,5 +1,7 @@
 package org.example;
 
+import static java.lang.String.format;
+
 public class Product {
     private String model;
     private String manufacturer;
@@ -15,9 +17,21 @@ public class Product {
 
 
 class Monitor extends Product {
+    private int size;
+    private String resolution;
 
     public Monitor(String model, String manufacturer) {
         super(model, manufacturer);
+    }
+
+    public Monitor(String model, String manufacturer, int size, String resolution) {
+        super(model, manufacturer);
+        this.size = size;
+        this.resolution = resolution;
+    }
+
+    public void drawPixelAt(int x, int y, String color) {
+        System.out.println(format("Drawing pixel at %d,%d in color %s ", x, y, color));
     }
 }
 
@@ -43,8 +57,18 @@ class Motherboard extends Product {
 }
 
 class ComputerCase extends Product {
+    private String PowerSupply;
 
     public ComputerCase(String model, String manufacturer) {
         super(model, manufacturer);
+    }
+
+    public ComputerCase(String model, String manufacturer, String powerSupply) {
+        super(model, manufacturer);
+        PowerSupply = powerSupply;
+    }
+
+    public void pressPowerButton() {
+        System.out.println("power button pressed");
     }
 }
