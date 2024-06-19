@@ -1,5 +1,8 @@
 package org.example;
 
+/*
+Encapsulation
+ */
 public class EnhancedPlayer {
     private String fullName;
     private int health;
