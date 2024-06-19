@@ -8,7 +8,7 @@ public class AllAboutStrings {
 
         String helloWorld = "Hello World";
         System.out.printf("index of r = %d %n", helloWorld.indexOf('r'));
-        System.out.printf("index of World = %d %n", helloWorld.indexOf("World"));
+        System.out.printf("index of World = %d %n", helloWorld.lastIndexOf("World"));
     }
 
     public static void printInfo(String string) {
