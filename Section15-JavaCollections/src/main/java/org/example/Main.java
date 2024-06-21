@@ -44,8 +44,13 @@ public class Main {
         Card.printDeck(deck, "Reversed Deck", 4);
 
         var sortAlgo = Comparator.comparing(Card::rank).thenComparing(Card::suit);
-        Collections.sort(deck,sortAlgo);
-        Card.printDeck(deck,"Standard Dec Sorted by rank, suit",13);
+        Collections.sort(deck, sortAlgo);
+        Card.printDeck(deck, "Standard Dec Sorted by rank, suit", 13);
+
+        Card tenOfHearts = Card.getNumericCard(Card.Suit.HEART, 10);
+        int foundIndex = Collections.binarySearch(deck, tenOfHearts, sortAlgo);
+        System.out.println("foundIndex = " + foundIndex);
+        System.out.println(deck.get(foundIndex));
 
     }
 
