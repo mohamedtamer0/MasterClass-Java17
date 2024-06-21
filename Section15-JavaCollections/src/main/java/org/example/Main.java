@@ -52,6 +52,17 @@ public class Main {
         System.out.println("foundIndex = " + foundIndex);
         System.out.println(deck.get(foundIndex));
 
+
+        Card tenOfClubs = Card.getNumericCard(Card.Suit.CLUB, 10);
+        Collections.replaceAll(deck, tenOfClubs, tenOfHearts);
+        Card.printDeck(deck.subList(32,36),"Tens row",1);
+
+
+        Collections.replaceAll(deck,tenOfHearts,tenOfClubs);
+        Card.printDeck(deck.subList(32,36),"Tens row",1);
+
+
+
     }
 
 }
