@@ -5,8 +5,6 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        List<Card> deck = Card.getStandardDeck();
-        Card.printDeck(deck);
 
         Card[] cardArray = new Card[13];
         Card aceOfHearts = Card.getFaceCard(Card.Suit.HEART, 'A');
@@ -34,6 +32,20 @@ public class Main {
 
         cards = List.copyOf(kingOfClubs);
         Card.printDeck(cards, "List Copy Of Kings", 1);
+
+        List<Card> deck = Card.getStandardDeck();
+        Card.printDeck(deck);
+
+
+        Collections.shuffle(deck);
+        Card.printDeck(deck, "Shuffled Deck", 4);
+
+        Collections.reverse(deck);
+        Card.printDeck(deck, "Reversed Deck", 4);
+
+        var sortAlgo = Comparator.comparing(Card::rank).thenComparing(Card::suit);
+        Collections.sort(deck,sortAlgo);
+        Card.printDeck(deck,"Standard Dec Sorted by rank, suit",13);
 
     }
 
