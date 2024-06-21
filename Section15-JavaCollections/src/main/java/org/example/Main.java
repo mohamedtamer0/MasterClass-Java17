@@ -7,6 +7,9 @@ public class Main {
 
         List<Card> deck = Card.getStandardDeck();
         Card.printDeck(deck);
+
+
+
     }
 
 }
