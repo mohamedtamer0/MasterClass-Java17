@@ -1,5 +1,8 @@
 # MasterClass-Java17
 
+![Java 17 Masterclass](https://github.com/mohamedtamer0/MasterClass-Java17/assets/51374446/0ab3967d-c99b-4f3c-94d2-08439b024396)
+
+
 ## Curriculum
 
 - [x] Section 01 - Course Introduction
