@@ -16,6 +16,7 @@ public class Example {
         });
 
         int result = calculator((value1, value2) -> value1 + value2, 5, 2);
+        var result2 = calculator((value1, value2) -> value1 / value2, 10.0, 2.5);
     }
 
     public static <T> T calculator(Operation<T> function, T value1, T value2) {
