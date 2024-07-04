@@ -15,5 +15,12 @@ public class Example {
             System.out.println(myString + " means " + first);
         });
 
+        int result = calculator((value1, value2) -> value1 + value2, 5, 2);
+    }
+
+    public static <T> T calculator(Operation<T> function, T value1, T value2) {
+        T result = function.operate(value1, value2);
+        System.out.println("Result of operation: " + result);
+        return result;
     }
 }
