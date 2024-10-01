@@ -1,24 +1,24 @@
-package org.example;
+package org.example.fromCourse;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class    Team<T> {
+public class BaseballTeam {
 
     private String teamName;
-    private List<T> teamMembers = new ArrayList<>();
+    private List<BaseballPlayer> teamMembers = new ArrayList<>();
     private int totalWins = 0;
     private int totalLosses = 0;
     private int totalTies = 0;
 
-    public Team(String teamName) {
+    public BaseballTeam(String teamName) {
         this.teamName = teamName;
     }
 
-    public void addTeamMember(T t) {
+    public void addTeamMember(BaseballPlayer player) {
 
-        if (!teamMembers.contains(t)) {
-            teamMembers.add(t);
+        if (!teamMembers.contains(player)) {
+            teamMembers.add(player);
         }
     }
 
