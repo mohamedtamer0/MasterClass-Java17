@@ -1,59 +1,22 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+@FunctionalInterface
+interface Calculator {
+    double calculate(double a, double b);
+}
 
 public class Main {
-
-    record Person(String firstName, String lastName) {
-        @Override
-        public String toString() {
-            return firstName + " " + lastName;
-        }
-    }
-
     public static void main(String[] args) {
-        List<Person> people = new ArrayList<>(Arrays.asList(
-                new Person("Mohamed", "Tamer"),
-                new Person("Osama", "Mohamed"),
-                new Person("Omar", "Ahmed")
-        ));
+        // تعريف عمليات الحساب باستخدام Lambda Expressions
+        Calculator addition = (a, b) -> a + b;
+        Calculator subtraction = (a, b) -> a - b;
+        Calculator multiplication = (a, b) -> a * b;
+        Calculator division = (a, b) -> b != 0 ? a / b : Double.NaN;
 
-        // Using Anonymous class
-        var comparatorLastName = new Comparator<Person>() {
-            @Override
-            public int compare(Person o1, Person o2) {
-                return o1.lastName().compareTo(o2.lastName());
-            }
-        };
-
-        people.sort((o1, o2) -> o1.lastName().compareTo(o2.lastName()));
-        System.out.println(people);
-
-        interface EnhancedComparator<T> extends Comparator<T> {
-            int secondLevel(T o1, T o2);
-        }
-
-        var comparatorMixed = new EnhancedComparator<Person>() {
-
-            @Override
-            public int compare(Person o1, Person o2) {
-                int result = o1.lastName().compareTo(o2.lastName());
-                return (result == 0 ? secondLevel(o1, o2) : result);
-            }
-
-            @Override
-            public int secondLevel(Person o1, Person o2) {
-                return o1.firstName().compareTo(o2.firstName());
-            }
-        };
-
-
-        people.sort(comparatorMixed);
-        System.out.println(people);
-
-
+        // اختبار العمليات
+        System.out.println("جمع: " + addition.calculate(10, 5));
+        System.out.println("طرح: " + subtraction.calculate(10, 5));
+        System.out.println("ضرب: " + multiplication.calculate(10, 5));
+        System.out.println("قسمة: " + division.calculate(10, 5));
     }
 }
